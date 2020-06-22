@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import akt.trainingmicro.msscbrewery.services.CustomerService;
 import akt.trainingmicro.msscbrewery.web.model.CustomerDto;
 
+@Deprecated
 @RequestMapping("/api/v1/customer")
 @RestController
 public class CustomerController {
