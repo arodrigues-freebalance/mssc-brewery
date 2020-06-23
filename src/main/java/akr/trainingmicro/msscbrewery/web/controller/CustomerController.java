@@ -1,4 +1,4 @@
-package akt.trainingmicro.msscbrewery.web.controller;
+package akr.trainingmicro.msscbrewery.web.controller;
 
 import java.util.UUID;
 
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import akt.trainingmicro.msscbrewery.services.CustomerService;
-import akt.trainingmicro.msscbrewery.web.model.CustomerDto;
+import akr.trainingmicro.msscbrewery.services.CustomerService;
+import akr.trainingmicro.msscbrewery.web.model.CustomerDto;
 
 @Deprecated
 @RequestMapping("/api/v1/customer")

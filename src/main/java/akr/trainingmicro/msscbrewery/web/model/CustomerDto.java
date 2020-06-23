@@ -1,4 +1,4 @@
-package akt.trainingmicro.msscbrewery.web.model;
+package akr.trainingmicro.msscbrewery.web.model;
 
 import java.util.UUID;
 

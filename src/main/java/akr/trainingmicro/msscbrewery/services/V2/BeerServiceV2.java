@@ -1,8 +1,8 @@
-package akt.trainingmicro.msscbrewery.services.V2;
+package akr.trainingmicro.msscbrewery.services.V2;
 
 import java.util.UUID;
 
-import akt.trainingmicro.msscbrewery.web.model.v2.BeerDtoV2;
+import akr.trainingmicro.msscbrewery.web.model.v2.BeerDtoV2;
 
 public interface BeerServiceV2 {
 

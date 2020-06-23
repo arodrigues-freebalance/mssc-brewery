@@ -1,10 +1,10 @@
-package akt.trainingmicro.msscbrewery.services;
+package akr.trainingmicro.msscbrewery.services;
 
 import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
-import akt.trainingmicro.msscbrewery.web.model.BeerDto;
+import akr.trainingmicro.msscbrewery.web.model.BeerDto;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

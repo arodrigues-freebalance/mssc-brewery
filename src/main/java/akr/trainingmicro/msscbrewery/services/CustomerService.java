@@ -1,8 +1,8 @@
-package akt.trainingmicro.msscbrewery.services;
+package akr.trainingmicro.msscbrewery.services;
 
 import java.util.UUID;
 
-import akt.trainingmicro.msscbrewery.web.model.CustomerDto;
+import akr.trainingmicro.msscbrewery.web.model.CustomerDto;
 
 public interface CustomerService {
 

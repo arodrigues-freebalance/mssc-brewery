@@ -1,6 +1,8 @@
-package akt.trainingmicro.msscbrewery.web.controller;
+package akr.trainingmicro.msscbrewery.web.controller;
 
 import java.util.UUID;
+
+import javax.validation.Valid;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -15,9 +17,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import akt.trainingmicro.msscbrewery.services.BeerService;
-import akt.trainingmicro.msscbrewery.web.model.BeerDto;
+import akr.trainingmicro.msscbrewery.services.BeerService;
+import akr.trainingmicro.msscbrewery.web.model.BeerDto;
 
+@Deprecated
 @RequestMapping("/api/v1/beer")
 @RestController
 public class BeerController {
@@ -35,7 +38,7 @@ public class BeerController {
     }
 
     @PostMapping // POST - create new beer
-    public ResponseEntity<BeerDto> handlePost(@RequestBody BeerDto beerDto){
+    public ResponseEntity<BeerDto> handlePost(@Valid @RequestBody BeerDto beerDto){
 
         BeerDto savedDto = beerService.saveNewBeer(beerDto);
 
@@ -43,15 +46,15 @@ public class BeerController {
         //todo add hostname to url
         headers.add("Location", "/api/v1/beer/" + savedDto.getId().toString());
 
-        return new ResponseEntity(headers, HttpStatus.CREATED);
+        return new ResponseEntity<BeerDto>(headers, HttpStatus.CREATED);
     }
 
     @PutMapping({"/{beerId}"})
-    public ResponseEntity handleUpdate(@PathVariable("beerId") UUID beerId, @RequestBody BeerDto beerDto){
+    public ResponseEntity<BeerDto> handleUpdate(@PathVariable("beerId") UUID beerId, @Valid @RequestBody BeerDto beerDto){
 
         beerService.updateBeer(beerId, beerDto);
 
-        return new ResponseEntity(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<BeerDto>(HttpStatus.NO_CONTENT);
     }
 
     @DeleteMapping({"/{beerId}"})

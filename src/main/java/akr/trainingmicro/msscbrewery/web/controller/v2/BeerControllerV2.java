@@ -1,4 +1,4 @@
-package akt.trainingmicro.msscbrewery.web.controller.v2;
+package akr.trainingmicro.msscbrewery.web.controller.v2;
 
 import java.util.UUID;
 
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import akt.trainingmicro.msscbrewery.services.V2.BeerServiceV2;
-import akt.trainingmicro.msscbrewery.web.model.v2.BeerDtoV2;
+import akr.trainingmicro.msscbrewery.services.V2.BeerServiceV2;
+import akr.trainingmicro.msscbrewery.web.model.v2.BeerDtoV2;
 
 
 
