@@ -1,5 +1,6 @@
 package akr.trainingmicro.msscbrewery.web.model;
 
+import java.time.OffsetDateTime;
 import java.util.UUID;
 
 import javax.validation.constraints.NotBlank;
@@ -24,5 +25,7 @@ public class BeerDto {
 	@Positive
 	private Long upc;
 	
+	private OffsetDateTime createdDate;
+	private OffsetDateTime lastUpdatedDate;
 
 }
